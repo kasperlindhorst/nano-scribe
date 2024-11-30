@@ -1,8 +1,6 @@
 # Nano Scribe
 ## Introduction
-Nano Scribe is a Google Chrome extension that utilizes the built-in Gemini Nano's model to chat & explain (Prompt AI),
-summarizes (Summarizer AI) and write and rewrites texts (Writer & Rewriter AI). This all happens in the default
-side panel of the browser. The extension is designed to be user-friendly and easy to use.
+Nano Scribe tackles the ever-growing problem of information overload in our digital world. We're constantly inundated with articles, documents, code, and social media updates, making it challenging to efficiently process everything.  While powerful AI tools exist, they often require users to jump between applications or copy and paste information, disrupting their flow. Nano Scribe addresses this by providing instant access to AI assistance within the user's existing workflow.  It seamlessly integrates with the Chrome browser, offering a convenient side panel where users can access AI-powered tools for summarizing, writing, rewriting, and prompting. This eliminates the need to switch between applications or copy-paste text, allowing users to interact with AI seamlessly and efficiently while staying focused on their tasks. Ultimately, Nano Scribe empowers users to navigate the sea of information with greater speed and confidence, transforming the way they interact with the digital world.
 
 This extension has been developed as part of the 'Google Chrome Built-in AI hackathon' on Devpost.
 
