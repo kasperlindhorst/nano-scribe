@@ -1,0 +1,393 @@
+/* CSS Variables (Material Design Inspired) */
+:root {
+    --primary-color: #4285F4; /* Google Blue */
+    --secondary-color: #EA4335;
+    --background-color: #FFFFFF;
+    --text-color: #202124;
+    --border-color: #DCDCDC;
+
+    --surface-color: #FFFFFF; /* For cards and surfaces */
+    --surface-color-hover: #F5F5F5;
+
+    --error-color: #EA4335;
+
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* General Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1 {
+    margin: 0 0 16px 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 24px 0 16px 0;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 16px 0 8px 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Tab Styles */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.tab-button:hover {
+    background-color: var(--surface-color-hover);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.tab-button.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.tab-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Section Styles (Card-like) */
+.section {
+    display: none;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    background-color: var(--surface-color);
+    overflow: hidden;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Settings Toggle */
+.settings-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.settings-toggle button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.settings-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Settings Container */
+.settings-container {
+    display: none;
+    width: 80%;
+    margin: 0 auto 20px auto;
+    background-color: var(--surface-color);
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.settings-container.show {
+    display: block;
+}
+
+/* Form Styles */
+.form-field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    appearance: none;
+}
+
+/* Output Container */
+.output-container {
+    margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container {
+    margin-bottom: 20px;
+}
+
+/* Common input and answer box styles */
+.input-answer-box {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+/* Text Area and Buttons */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    resize: vertical;
+    height: 120px;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+}
+
+textarea::placeholder {
+    color: #999;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #3367d6;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+#clearButton {
+    background-color: white;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+/* Common input prompt styles */
+.input-prompt {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    resize: vertical;
+    overflow-y: hidden;
+    white-space: pre-wrap;
+    min-height: 40px; /* Start with a minimal height */
+    height: auto; /* Allow it to expand as needed */
+    transition: height 0.2s ease-out;
+}
+
+#promptTab .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Take up full container height */
+}
+
+.answer-box {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 4px;
+    background-color: var(--surface-color);
+    box-shadow: 0 1px 3px var(--shadow-color);
+    white-space: pre-wrap;
+    min-height: 120px;
+    box-sizing: border-box;
+}
+
+#promptTab .input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 10px;
+}
+
+#promptTab #chatInput {
+    transition: height 0.2s ease-out;
+}
+
+#promptTab #chatMessages strong,
+#promptTab #chatMessages b {
+    font-weight: bold;
+}
+
+#promptTab #chatMessages em,
+#promptTab #chatMessages i {
+    font-style: italic;
+}
+
+#promptTab #chatMessages a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#promptTab #chatMessages a:hover {
+    text-decoration: underline;
+}
+
+#promptTab #chatMessages ul,
+#promptTab #chatMessages ol {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 2em;
+    list-style-type: disc; /* Ensure list-style-type is set */
+}
+
+#promptTab #chatMessages li {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+
+#promptTab #chatMessages h1,
+#promptTab #chatMessages h2,
+#promptTab #chatMessages h3,
+#promptTab #chatMessages h4,
+#promptTab #chatMessages h5,
+#promptTab #chatMessages h6 {
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+#promptTab #chatMessages p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#promptTab .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+#promptTab .button-group button { /* Target the buttons within the group */
+    background-color: #1a73e8; /* Darker blue */
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Adjust padding as needed */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-left: 10px;
+}
+
+#promptTab .button-group button:hover {
+    background-color: var(--primary-color); /* Lighter blue on hover */
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+#promptTab .button-group button img {
+    width: 20px;
+    height: 20px;
+}
+
+.button-container button {
+    background-color: #1a73e8; /* Darker blue */
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Adjust padding as needed */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-left: 10px;
+}
+
+.button-container button:hover {
+    background-color: var(--primary-color); /* Lighter blue on hover */
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.button-container button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Apply common styles to input and answer boxes */
+.input-prompt,
+.answer-box,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
