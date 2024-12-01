@@ -36,6 +36,8 @@ const handleEnterKeyPress = (event) => {
         event.preventDefault();
         if (event.target.id === 'chatInput') {
             document.getElementById('explainButton').click();
+        } else if (event.target.id === 'writerInput') {
+            document.getElementById('rewriteButton').click();
         }
     }
 };
